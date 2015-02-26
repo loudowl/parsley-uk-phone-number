@@ -1,4 +1,7 @@
+/*global $:false */
 (function () {
+   "use strict";
+
     var validateUkPhoneNumber = function (phoneNumber) {
         if (!validateFormat(phoneNumber)) {
           return false;
@@ -50,7 +53,7 @@
         }
 
         return false;
-    }
+    };
 
     var extractPrefix = function (phoneNumber) {
         var extractor = new RegExp('^\\(?(?:(?:0(?:0|11)\\)?[\\s-]?\\(?|\\+)(44)\\)?[\\s-]?\\(?(?:0\\)?[\\s-]?\\(?)?|0)([1-9]\\d{1,4}\\)?[\\s\\d-]+)(?:((?:x|ext\\.?\\s?|\\#)\\d+)?)$');
